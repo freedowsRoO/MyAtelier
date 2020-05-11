@@ -1,6 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Product extends Model {
+class Shopping extends Model {
     static init(sequelize) {
         super.init(
             {
@@ -10,6 +10,8 @@ class Product extends Model {
             },
             {
                 sequelize,
+                freezeTableName: true,
+                modelName: 'shopping'
             }
         )
 
@@ -17,4 +19,6 @@ class Product extends Model {
     }
 }
 
-export default Product;
+export default Shopping;
+
+
